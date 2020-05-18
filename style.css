@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    vertical-align: baseline;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: azure;
+}
+
+#app {
+    display: flexbox;
+    justify-content: space-between;
+    width: 50vw;
+    height: 100vh;
+    background-color: azure;
+    align-self: center;
+    align-items: center;
+    margin: auto;
+}
+
+.row {
+    display: block;
+    width: 80%;
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.row input {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    height: 31px;
+    width: 75%;
+    border-radius: 15px;
+    border: 1px;
+    background-color: lavender;
+    padding: 5px;
+}
+
+.row button {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 15px;
+    border: 1px;
+    width: 25%;
+    background-color: rosybrown;
+    padding: 5px;
+}
+
+@media only screen and (max-width:800px) {
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        vertical-align: baseline;
+    }
+    #app {
+        display: flexbox;
+        justify-content: space-between;
+        background-color: azure;
+        align-self: center;
+        align-items: center;
+        margin: auto;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        vertical-align: baseline;
+    }
+    #app {
+        display: flexbox;
+        justify-content: space-between;
+        background-color: azure;
+        align-self: center;
+        align-items: center;
+        margin: auto;
+        width: 100vw;
+        height: 100vh;
+    }
+    .row {
+        display: block;
+        width: 100%;
+        display: flexbox;
+        margin: 20px;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .row input {
+        display: block;
+        width: 75%;
+        margin-bottom: 20px;
+    }
+    .row button {
+        display: block;
+        width: 75%;
+    }
+}
