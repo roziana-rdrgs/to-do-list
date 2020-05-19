@@ -11,22 +11,25 @@ function renderTodos() {
         var todoElement = document.createElement('li');
         var todoText = document.createTextNode(todo);
 
+        var divTodoElement = document.createElement('div');
+        divTodoElement.className = "divTodoElement";
+
         var linkElement = document.createElement('a');
         linkElement.setAttribute('href', '#');
-
 
         var pos = todos.indexOf(todo);
         linkElement.setAttribute('onclick', 'deleteTodo(' + pos + ')');
 
         var linkIcon = document.createElement('i');
-
         linkIcon.className = 'fas fa-trash';
-        linkElement.appendChild(linkIcon);
 
         todoElement.appendChild(todoText);
-        todoElement.appendChild(linkElement);
+        divTodoElement.appendChild(todoElement);
 
-        listElement.appendChild(todoElement);
+        linkElement.appendChild(linkIcon);
+        divTodoElement.appendChild(linkElement);
+
+        listElement.appendChild(divTodoElement);
 
     }
 }
@@ -36,7 +39,7 @@ function addTodo() {
     var todoText = inputElement.value;
 
     if (todoText != "") {
-        todos.push(todoText + "\t");
+        todos.push(todoText);
         inputElement.value = '';
 
         renderTodos();
